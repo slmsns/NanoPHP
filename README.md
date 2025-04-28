@@ -1,6 +1,6 @@
 # 用户中心系统
 
-![系统架构图](https://via.placeholder.com/800x400?text=System+Architecture+Diagram)
+##当前已写了管理员后台和用户中心的示例代码，仅供参考
 
 ## 目录
 - [功能特性](#功能特性)
@@ -27,7 +27,7 @@
 ### 安装步骤
 1. 克隆仓库：
 ```bash
-git clone https://github.com/xiaoheczy/frame.git
+git clone [https://github.com/xiaoheczy/frame](https://github.com/slmsns/NanoPHP).git
 cd user-center
 ```
 
@@ -45,29 +45,6 @@ cp .env.example .env
 4. 数据库迁移：
 ```bash
 php artisan migrate --seed
-```
-
-## 配置说明
-
-### 邮件配置
-在`.env`文件中配置：
-```ini
-MAIL_DRIVER=smtp
-MAIL_HOST=smtp.example.com
-MAIL_PORT=587
-MAIL_USERNAME=your-email@example.com
-MAIL_PASSWORD=your-password
-```
-
-### 支付配置
-```php
-// config/payment.php
-return [
-    'alipay' => [
-        'app_id' => 'your-app-id',
-        'public_key' => 'your-public-key'
-    ]
-];
 ```
 
 ## 使用教程
@@ -108,8 +85,5 @@ Content-Type: application/json
 ### 忘记密码怎么办？
 访问`/user/forgot-password`重置密码
 
-### 余额不更新？
-请检查支付回调配置是否正确
-
 ### 如何联系客服？
-发送邮件至 support@example.com
+发送邮件至 admin@mail.slmnsn.com
