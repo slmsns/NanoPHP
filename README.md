@@ -1,6 +1,7 @@
 # 用户中心系统
 
-##当前已写了管理员后台和用户中心的示例代码，仅供参考
+## 介绍
+当前已写了管理员后台和用户中心的示例代码，仅供参考
 
 ## 目录
 - [功能特性](#功能特性)
@@ -27,7 +28,7 @@
 ### 安装步骤
 1. 克隆仓库：
 ```bash
-git clone [https://github.com/xiaoheczy/frame](https://github.com/slmsns/NanoPHP).git
+git clone https://github.com/slmsns/NanoPHP.git
 cd user-center
 ```
 
@@ -45,6 +46,12 @@ cp .env.example .env
 4. 数据库迁移：
 ```bash
 php artisan migrate --seed
+```
+
+5. 项目启动：
+```bash
+php -S localhost:8000 -t public
+# 使用8000端口，按需修改，详情链接可以看路由设置
 ```
 
 ## 使用教程
