@@ -1,0 +1,8 @@
+{
+    "name": "frame/framework",
+    "type": "project",
+    "require": {
+        "ext-pdo": "*",
+        "ext-pdo_mysql": "*"
+    }
+}
