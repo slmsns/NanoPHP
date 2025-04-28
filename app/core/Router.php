@@ -29,12 +29,12 @@ class Router {
         }
 
         // 准备调试信息
-        $debug = "Debug Info:<br>";
-        $debug .= "Request: $requestMethod $requestUri<br>";
-        $debug .= "Available routes:<br>";
-        foreach ($this->routes as $i => $route) {
-            $debug .= "Route $i: {$route['method']} {$route['path']}<br>";
-        }
+        // $debug = "Debug Info:<br>";
+        // $debug .= "Request: $requestMethod $requestUri<br>";
+        // $debug .= "Available routes:<br>";
+        // foreach ($this->routes as $i => $route) {
+        //     $debug .= "Route $i: {$route['method']} {$route['path']}<br>";
+        // }
 
         foreach ($this->routes as $route) {
             // 简单路径匹配
@@ -70,7 +70,7 @@ class Router {
         }
 
         // 没有匹配的路由
-        echo $debug;
+        // echo $debug;
         header('HTTP/1.1 404 Not Found', true, 404);
         echo json_encode(['error' => 'Not Found']);
     }
