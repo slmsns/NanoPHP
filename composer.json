@@ -1,5 +1,5 @@
 {
-    "name": "frame/framework",
+    "name": "nanophp/nanophp",
     "type": "project",
     "require": {
         "ext-pdo": "*",

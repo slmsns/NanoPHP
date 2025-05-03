@@ -6,6 +6,7 @@ return [
     ['GET', '/user/login', 'UserController', 'login'],
     ['POST', '/api/login', 'UserController', 'login'],
     ['POST', '/api/register', 'UserController', 'register'],
+    ['GET', '/user', 'UserController', 'profile'],
     ['GET', '/user/profile', 'UserController', 'profile'],
     ['PUT', '/api/profile', 'UserController', 'updateProfile'],
     ['GET', '/user/balance', 'UserController', 'balance'],

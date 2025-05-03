@@ -1,4 +1,5 @@
-# 用户中心系统
+# NanoPHP框架
+# NanoPHP is a simple and lightweight PHP framework for building web applications.
 
 ## 介绍
 当前已写了管理员后台和用户中心的示例代码，仅供参考
@@ -55,37 +56,26 @@ php -S localhost:8000 -t public
 ```
 
 ## 使用教程
+### 控制器
+Controller 目录下存放了所有控制器，每个控制器都对应着一个 URL 路由，控制器的命名规则为 `ControllerNameController`，例如 `HomeController` 对应着 `/` 路由，`UserController` 对应着 `/user` 路由。
+- UserController：用户相关接口
+- AdminController：管理员相关接口
+- AuthController：登录相关接口
+- BalanceController：账户充值相关接口
 
-### 用户注册
-1. 访问`/user/register`
-2. 填写注册表单
-3. 验证邮箱
 
-### 账户充值
-1. 登录后访问`/user/balance`
-2. 点击"充值"按钮
-3. 选择支付方式完成支付
+### 模型
+Model 目录下存放了所有模型，每个模型都对应着一个数据表，模型的命名规则为 `ModelName`，例如 `User` 对应着 `users` 数据表。
+- User：用户模型
+- Admin：管理员模型
+- Balance：账户模型
 
-## API文档
+### 视图
+View 目录下存放了所有视图，视图的命名规则为 `view.php`，例如 `home.php` 对应着 `/` 路由，`user.php` 对应着 `/user` 路由。
 
-### 用户登录
-```http
-POST /api/login
-Content-Type: application/json
+### 路由
+路由文件 `routes/web.php` 中定义了所有 URL 路由，路由的命名规则为 `Route::get('/url', 'ControllerName@actionName')`，例如 `Route::get('/', 'HomeController@index')` 对应着 `/` 路由，`Route::get('/user', 'UserController@index')` 对应着 `/user` 路由。
 
-{
-    "username": "testuser",
-    "password": "test123"
-}
-```
-
-响应示例：
-```json
-{
-    "success": true,
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
-}
-```
 
 ## 常见问题
 
